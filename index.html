@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magna Production & Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* CSS untuk animasi elemen saat di-scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 top-0 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <h1 class="text-2xl font-bold text-red-700 tracking-wider">MAGNA</h1>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#beranda" class="text-gray-800 hover:text-red-700 font-medium transition">Beranda</a>
+                    <a href="#tentang" class="text-gray-800 hover:text-red-700 font-medium transition">Tentang Kami</a>
+                    <a href="#layanan" class="text-gray-800 hover:text-red-700 font-medium transition">Layanan</a>
+                    <a href="#klien" class="text-gray-800 hover:text-red-700 font-medium transition">Klien</a>
+                    <a href="https://wa.me/6282230693755" class="bg-red-700 text-white px-5 py-2 rounded-md font-semibold hover:bg-red-800 transition transform hover:scale-105">Hubungi Kami</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-800 hover:text-red-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel (Tersembunyi secara default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full left-0 top-20 border-t">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                <a href="#beranda" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:bg-red-50 hover:text-red-700">Beranda</a>
+                <a href="#tentang" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:bg-red-50 hover:text-red-700">Tentang Kami</a>
+                <a href="#layanan" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:bg-red-50 hover:text-red-700">Layanan</a>
+                <a href="#klien" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:bg-red-50 hover:text-red-700">Klien</a>
+                <a href="https://wa.me/6282230693755" class="block mt-4 text-center bg-red-700 text-white px-5 py-3 rounded-md font-semibold hover:bg-red-800 transition">Hubungi Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="pt-32 pb-20 bg-gradient-to-r from-red-900 to-red-700 text-white min-h-[80vh] flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Creative Media, IT Developer, <br>& Digital Solutions</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-gray-200">Siap menjawab kegelisahan dan kekhawatiran Anda dalam memberdayakan keterampilan abad 21 bagi tim perusahaan Anda.</p>
+            <a href="#layanan" class="inline-block bg-white text-red-700 px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-lg transform hover:-translate-y-1">Lihat Layanan Kami</a>
+        </div>
+    </section>
+
+    <!-- Highlight / Visi & Misi Section -->
+    <section class="py-16 bg-white relative z-10 -mt-10 mx-4 md:mx-auto max-w-7xl rounded-xl shadow-xl">
+        <div class="px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 fade-in hover:transform hover:scale-105 transition duration-300">
+                    <i class="fas fa-lightbulb text-5xl text-red-700 mb-4 drop-shadow-md"></i>
+                    <h3 class="text-xl font-bold mb-2">Media yang Relevan</h3>
+                    <p class="text-gray-600">Menyediakan layanan media yang relevan dengan zaman, akurat, dan mudah diakses semua kalangan.</p>
+                </div>
+                <div class="p-6 fade-in hover:transform hover:scale-105 transition duration-300" style="transition-delay: 100ms;">
+                    <i class="fas fa-bullseye text-5xl text-red-700 mb-4 drop-shadow-md"></i>
+                    <h3 class="text-xl font-bold mb-2">Edukasi & Brand Awareness</h3>
+                    <p class="text-gray-600">Meningkatkan brand awareness pengguna melalui konten yang menarik, edukatif, dan interaktif.</p>
+                </div>
+                <div class="p-6 fade-in hover:transform hover:scale-105 transition duration-300" style="transition-delay: 200ms;">
+                    <i class="fas fa-chart-line text-5xl text-red-700 mb-4 drop-shadow-md"></i>
+                    <h3 class="text-xl font-bold mb-2">Pertumbuhan Bisnis</h3>
+                    <p class="text-gray-600">Mencapai profitabilitas dan pertumbuhan bisnis yang berkelanjutan melalui model bisnis yang inovatif.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Kami Section -->
+    <section id="tentang" class="py-20 bg-gray-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 fade-in">
+                <!-- Gambar yang Anda upload dimasukkan di sini -->
+                <img src="IMG_20191223_094425.jpg" alt="Tim Magna Production sedang syuting di studio" class="rounded-xl shadow-2xl hover:scale-105 transition duration-500 w-full h-auto object-cover">
+            </div>
+            <div class="md:w-1/2 fade-in" style="transition-delay: 200ms;">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Mengenal PT Magna Development Solution</h2>
+                <div class="w-20 h-1 bg-red-700 mb-6"></div>
+                <p class="text-gray-600 mb-4 leading-relaxed text-lg">
+                    Magna adalah agensi kreatif dan teknologi yang telah berpengalaman sejak tahun 2017. Kami resmi terdaftar di Kementerian Hukum dan HAM Republik Indonesia sejak tanggal 19 Juni 2023.
+                </p>
+                <p class="text-gray-600 leading-relaxed text-lg">
+                    Kami berfokus pada penyediaan layanan profesional mencakup Jasa Multimedia, Pelatihan Kerja Teknologi Informasi (IT & Coding), pengembangan website, aplikasi, serta game.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan Jasa Section -->
+    <section id="layanan" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 fade-in">Layanan Jasa Kami</h2>
+            <div class="w-20 h-1 bg-red-700 mx-auto mb-6 fade-in"></div>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-12 text-lg fade-in">Menciptakan campaign yang efektif, riset konten mendalam, dan mengembangkan teknologi untuk pertumbuhan bisnis Anda.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 text-left fade-in">
+                    <div class="h-48 bg-gradient-to-br from-red-700 to-red-900 flex items-center justify-center text-white text-6xl">
+                        <i class="fas fa-photo-video group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Production & Creative</h3>
+                        <p class="text-gray-600">Company Profile Production, Content Development, dan Creative Design.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 text-left fade-in" style="transition-delay: 100ms;">
+                    <div class="h-48 bg-gradient-to-br from-red-700 to-red-900 flex items-center justify-center text-white text-6xl">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Digital Marketing</h3>
+                        <p class="text-gray-600">Social Media Marketing, SEO, Performance Marketing, dan layanan KOL.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 text-left fade-in" style="transition-delay: 200ms;">
+                    <div class="h-48 bg-gradient-to-br from-red-700 to-red-900 flex items-center justify-center text-white text-6xl">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">IT & Game Dev</h3>
+                        <p class="text-gray-600">Website, Apps, Roblox Game Development, serta IT Coding & Custom Software.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulir Kontak Dinamis Section -->
+    <section id="kontak" class="py-20 bg-red-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Kirim Pesan ke Magna</h2>
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label for="nama" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 transition">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Alamat Email</label>
+                        <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 transition">
+                    </div>
+                    <div>
+                        <label for="pesan" class="block text-sm font-medium text-gray-700">Pesan / Kebutuhan Anda</label>
+                        <textarea id="pesan" name="pesan" rows="4" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 transition"></textarea>
+                    </div>
+                    <button type="submit" id="btnSubmit" class="w-full bg-red-700 text-white font-bold py-3 px-4 rounded-md hover:bg-red-800 transition duration-300 flex justify-center items-center shadow-md">
+                        Kirim Pesan Sekarang
+                    </button>
+                </form>
+                <!-- Pesan Notifikasi Sukses/Gagal -->
+                <div id="statusMessage" class="mt-4 text-center hidden font-semibold rounded p-3 transition"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="fade-in">
+                <h2 class="text-3xl font-bold text-white tracking-wider mb-6">MAGNA</h2>
+                <p class="text-sm mb-4 leading-relaxed">PT Magna Development Solution<br>Creative Media, IT Developer, & Digital Solutions</p>
+                <p class="text-sm italic">"Menjadikan perusahaan dan tim Anda yang terdepan."</p>
+            </div>
+            <div class="fade-in" style="transition-delay: 100ms;">
+                <h3 class="text-xl font-bold text-white mb-6 border-b border-gray-700 pb-2 inline-block">Navigasi Cepat</h3>
+                <ul class="space-y-3">
+                    <li><a href="#beranda" class="hover:text-red-500 transition flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i> Beranda</a></li>
+                    <li><a href="#tentang" class="hover:text-red-500 transition flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i> Tentang Kami</a></li>
+                    <li><a href="#layanan" class="hover:text-red-500 transition flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i> Layanan</a></li>
+                </ul>
+            </div>
+            <div class="fade-in" style="transition-delay: 200ms;">
+                <h3 class="text-xl font-bold text-white mb-6 border-b border-gray-700 pb-2 inline-block">Kontak</h3>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt mt-1 mr-4 text-red-500 text-lg"></i>
+                        <span><strong>Head Office:</strong><br>Ruko Jl. Danau Jonge H7/31C Malang<br><br><strong>Jakarta Studio:</strong><br>Hah Studio, Jakarta</span>
+                    </li>
+                    <li class="flex items-center mt-4">
+                        <i class="fab fa-whatsapp mr-4 text-green-500 text-xl"></i>
+                        <a href="https://wa.me/6282230693755" class="hover:text-white text-lg font-semibold">+62 822-3069-3755</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope mr-4 text-red-500 text-lg"></i>
+                        <a href="mailto:adv.magnadev@gmail.com" class="hover:text-white">adv.magnadev@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-16 pt-8 text-center text-sm text-gray-500">
+            <p>&copy; 2026 PT Magna Development Solution. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT DINAMIS -->
+    <script>
+        // 1. Logika Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if(menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Menutup menu mobile saat link diklik
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // 2. Animasi Scroll (Intersection Observer)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // 3. Logika Form Kontak API
+        const contactForm = document.getElementById('contactForm');
+        const statusMessage = document.getElementById('statusMessage');
+        const btnSubmit = document.getElementById('btnSubmit');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault(); 
+            
+            btnSubmit.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Mengirim...';
+            btnSubmit.disabled = true;
+
+            const formData = {
+                nama: document.getElementById('nama').value,
+                email: document.getElementById('email').value,
+                pesan: document.getElementById('pesan').value
+            };
+
+            try {
+                // Pastikan server backend Node.js Anda berjalan di URL ini
+                const response = await fetch('http://localhost:3000/api/kontak', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    statusMessage.textContent = 'Berhasil! Pesan Anda telah terkirim ke tim Magna.';
+                    statusMessage.className = 'mt-4 text-center font-semibold rounded p-3 bg-green-100 text-green-700 block';
+                    contactForm.reset();
+                } else {
+                    throw new Error(result.message || 'Gagal mengirim pesan.');
+                }
+            } catch (error) {
+                // Jika backend belum dijalankan, error akan muncul di sini
+                statusMessage.innerHTML = 'Gagal terhubung ke server. <br><span class="text-sm font-normal">Pastikan server Node.js sudah berjalan. Error: ' + error.message + '</span>';
+                statusMessage.className = 'mt-4 text-center font-semibold rounded p-3 bg-red-100 text-red-700 block';
+            } finally {
+                btnSubmit.innerHTML = 'Kirim Pesan Sekarang';
+                btnSubmit.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
